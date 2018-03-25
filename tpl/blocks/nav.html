@@ -1,0 +1,387 @@
+<div class="block text-center mt ambiente">
+    <label class="label" > EMPRESA </label>
+    <select class="form-control input-sm" ng-change="onChangeEmpresaSession(); $event.preventDefault();" ng-model="arrMain.empresaadmin" 
+      ng-options="item as item.descripcion for item in arrMain.listaEmpresaAdminSession"> </select>
+</div>
+<li class="line dk"></li>
+<!-- list -->
+<ul class="nav" ng-show="isLoggedIn">
+  <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">
+    <span translate="aside.nav.HEADER"> </span> 
+  </li>
+  <!-- DASHBOARD --> 
+  <li ui-sref-active="active">
+    <a ui-sref="app.dashboard">
+      <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.DASHBOARD"> </span>
+    </a>
+  </li>
+  <!-- SEGURIDAD -->
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-user icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.SEGURIDAD"> </span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.SEGURIDAD"> </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.colaborador"> 
+          <span>Colaboradores</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.usuario"> 
+          <span>Usuario</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.tipo_usuario"> 
+          <span>Tipo de Usuario</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.rol"> 
+          <span> Roles </span>
+        </a>
+      </li>
+    </ul>
+  </li> 
+  <!-- CLIENTES -->
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-user icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.CLIENTE"> </span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.CLIENTE"> </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.persona-juridica"> 
+          <span>Clientes</span>
+        </a>
+      </li>
+      <!-- <li ui-sref-active="active">
+        <a ui-sref="app.persona-natural"> 
+          <span>Persona Natural</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.persona-juridica"> 
+          <span>Persona Jurídica</span>
+        </a>
+      </li> -->
+      <li ui-sref-active="active">
+        <a ui-sref="app.contacto"> 
+          <span>Contactos</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.categoria-cliente"> 
+          <span>Categoria de Cliente</span>
+        </a>
+      </li>
+    </ul>
+  </li> 
+  <!-- ELEMENTOS -->
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-user icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.ELEMENTO"> </span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.ELEMENTO"> </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.producto"> 
+          <span>Productos</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.servicio"> 
+          <span>Servicios</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.categoria-elemento"> 
+          <span>Categorias</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.caracteristica"> 
+          <span>Características</span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.variable-car"> 
+          <span> Variable </span>
+        </a>
+      </li> 
+    </ul>
+  </li> 
+  <!-- OTROS MANTENIMIENTOS --> 
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th-large icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.OTROS_MANT"> </span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.OTROS_MANT"> </span>
+        </a>
+      </li> 
+      <li ui-sref-active="active">
+        <a ui-sref="app.unidad-medida"> 
+          <span> Unidad de Medida </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.banco"> 
+          <span> Banco </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.empresa-admin"> 
+          <span> Empresa </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.sede"> 
+          <span> Sede </span>
+        </a>
+      </li>
+    </ul>
+  </li> 
+  <!-- COTIZACIONES -->
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th-large icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.COTIZACION"> </span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.COTIZACION"> </span>
+        </a>
+      </li> 
+      <li ui-sref-active="active">
+        <a ui-sref="app.nueva-cotizacion"> 
+          <span> Nueva Cotización </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.historial-cotizacion"> 
+          <span> Historial </span>
+        </a>
+      </li>
+    </ul>
+  </li> 
+  <!-- NOTAS DE PEDIDO -->
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th-large icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.NOTA_PEDIDO"> </span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.NOTA_PEDIDO"> </span>
+        </a>
+      </li> 
+      <li ui-sref-active="active">
+        <a ui-sref="app.nueva-nota-pedido"> 
+          <span> Nueva Nota de Pedido </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.historial-nota-pedido"> 
+          <span> Historial </span>
+        </a>
+      </li> 
+    </ul>
+  </li>
+  <!-- CAJAS Y VENTAS -->
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th-large icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.CAJA_VENTA"> </span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.CAJA_VENTA"> </span>
+        </a>
+      </li> 
+      <li ui-sref-active="active">
+        <a ui-sref="app.nueva-venta"> 
+          <span> Nueva Venta </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.liquidacion-actual"> 
+          <span> Liquidación Actual </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.historial-caja"> 
+          <span> Hist. de Cajas </span>
+        </a>
+      </li> 
+      <li ui-sref-active="active">
+        <a ui-sref="app.historial-ventas"> 
+          <span> Hist. de Ventas </span>
+        </a>
+      </li> 
+      <li ui-sref-active="active">
+        <a ui-sref="app.documento-serie"> 
+          <span> Documentos y Series </span>
+        </a>
+      </li> 
+      <li ui-sref-active="active">
+        <a ui-sref="app.caja"> 
+          <span> Cajas </span>
+        </a>
+      </li> 
+    </ul>
+  </li>
+  <!-- GUIAS DE REMISIÓN --> 
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th-large icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.GUIA_REM"> </span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.GUIA_REM"> </span>
+        </a>
+      </li> 
+      <li ui-sref-active="active">
+        <a ui-sref="app.nueva-guia-remision"> 
+          <span> Nueva Guía </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.historial-guia-remision"> 
+          <span> Historial </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.motivo-traslado"> 
+          <span> Motivos de Traslado </span>
+        </a>
+      </li> 
+    </ul>
+  </li> 
+  <!-- TESORERIA --> 
+  <li>
+    <a href class="auto">      
+      <span class="pull-right text-muted">
+        <i class="fa fa-fw fa-angle-right text"></i>
+        <i class="fa fa-fw fa-angle-down text-active"></i>
+      </span>
+      <i class="glyphicon glyphicon-th-large icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.TESORERIA"> </span>
+    </a>
+    <ul class="nav nav-sub dk">
+      <li class="nav-sub-header">
+        <a href>
+          <span translate="aside.nav.TESORERIA"> </span>
+        </a>
+      </li> 
+      <li ui-sref-active="active">
+        <a ui-sref="app.nuevo-pago"> 
+          <span> Nuevo Pago </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.historial-pago"> 
+          <span> Historial de Pagos </span>
+        </a>
+      </li>
+      <li ui-sref-active="active">
+        <a ui-sref="app.formas-pago"> 
+          <span> Formas de Pago </span>
+        </a>
+      </li> 
+      <li ui-sref-active="active">
+        <a ui-sref="app.medio-pago"> 
+          <span> Medios de Pago </span>
+        </a>
+      </li> 
+    </ul>
+  </li> 
+  <!-- CONSULTAS --> 
+  <li ui-sref-active="active">
+    <a ui-sref="app.consultas">
+      <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.CONSULTAS"> </span> 
+    </a>
+  </li>
+  <!-- CENTRAL DE REPORTES --> 
+  <li ui-sref-active="active">
+    <a ui-sref="app.central-reportes">
+      <i class="glyphicon glyphicon-stats icon text-primary-dker"></i>
+      <span class="font-bold" translate="aside.nav.CENTRAL_REPORTES"> </span> 
+    </a>
+  </li>
+  <li class="line dk hidden-folded"></li>
+<!--   <li class="hidden-folded padder m-t m-b-sm text-muted text-xs">          
+    <span translate="aside.nav.your_stuff.YOUR_STUFF">Your Stuff</span>
+  </li>  
+  <li>
+    <a ui-sref="app.page.profile">
+      <i class="icon-user icon text-success-lter"></i>
+      <b class="badge bg-success pull-right">30%</b>
+      <span translate="aside.nav.your_stuff.PROFILE">Profile</span>
+    </a>
+  </li>
+  <li>
+    <a ui-sref="app.docs">
+      <i class="icon-question icon"></i>
+      <span translate="aside.nav.your_stuff.DOCUMENTS">Documents</span>
+    </a>
+  </li> --> 
+</ul> 

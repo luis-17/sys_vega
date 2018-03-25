@@ -1,0 +1,119 @@
+/* Created and Modified by luisls1717@gmail.com */
+/* UI GRID FIX */
+.fs-mini-grid .ui-grid-cell-contents{ 
+    padding: 5px;
+}
+.fs-mini-grid .ui-grid-header-cell .ui-grid-cell-contents{ 
+	font-size: 12px; 
+}
+.fs-mini-grid .ui-grid-header-cell .ui-grid-cell-contents{ 
+    text-transform: uppercase;
+}
+.fs-mini-grid .ui-grid-cell, .ui-grid-row {
+    min-height: 28px;
+    height: 28px;
+}
+.fs-mini-grid .ui-grid-column-menu-button {
+     top: 0; 
+}
+.fs-mini-grid.ui-grid{ 
+	border: 1px solid rgb(204, 219, 230);
+}
+.fs-mini-grid.ui-grid .ui-grid-contents-wrapper{ 
+	background-color: #e3e7ea;
+}
+.ui-grid-viewport .ui-editCell, .ui-editPanel{
+    background-color: #fcfbcd !important;
+    font-style: oblique !important;
+}
+.ui-grid-disable-selection, .fs-mini-grid .ui-grid-cell{
+    -webkit-touch-callout:all !important;
+    -webkit-user-select:all !important;
+    -khtml-user-select:all !important;
+    -moz-user-select:all !important;
+    -ms-user-select:all !important;
+    user-select:all !important;
+    cursor:default;
+}
+
+
+.btn {
+	text-transform: uppercase;
+}
+.fs-mini-grid .ui-grid-pager-panel{ 
+	background-color: #f6f8f8;
+ 	border-top: 1px solid #ccdbe6;
+}
+.modal-xlg { 
+    width: 900px;
+}
+/*FONT SIZE*/
+.f-10{
+    font-size: 10px; 
+    margin: 0;
+}
+.f-9{
+    font-size: 9px; 
+    margin: 0;
+}
+.input-normal-border{
+    border-color: #cfdadd;
+}
+.input-danger-border{
+    border-color: #f05050;
+}
+.input-success-border{
+    border-color: #27c24c;
+}
+.form-group-sm{
+    margin-bottom: 8px;
+}
+
+.fieldset-sm legend{
+	text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+form.edit-form input, form.edit-form select { 
+	background-color: #fcfcbc; 
+}
+
+.navbar-brand img { 
+    max-height: 80px;
+}
+
+.navi-wrap .ambiente select{
+	width: 88%;
+    margin: auto;
+    height: 24px;
+    font-size: 10px;
+    padding: 4px;
+}
+
+.text-ellipsis{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+}
+    
+.lead.lead-sm {
+    margin-bottom: 10px; 
+}
+
+.input-xs {
+    height: 24px;
+    padding: 3px 6px;
+    font-size: 11px;
+    line-height: 1.2;
+    border-radius: 3px;
+}
+.text-danger {
+    color: #f05050 !important;
+}
+
+/* bug CSS grid */ 
+.ui-grid-canvas{ 
+    overflow: hidden !important;
+}
